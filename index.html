@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Shop 2.0/Images/favicon.png">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Your Style</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-logo" href="#">
+                <img class="navbar-logo-img" src="Images/favicon.png" alt="">
+            </a>
+        </div>
+
+        <div class="navbar-items">
+            <a href="#" class="navbar-item"><i class="fa fa-home"></i> Главная</a>
+            <a href="#" class="navbar-item"><i class="fa fa-book"></i> Работы</a>
+            <a href="#" class="navbar-item"><i class="fa fa-info"></i> Информация</a>
+            <a href="#" class="navbar-item" id="btnTp"><i class="fa fa-id-card"></i> Помощь</a>
+
+            <!-- Функция тех. поддержки -->
+
+            <div id="modalTp" class="modal-tp">
+
+                <div class="modal-content-tp animate__animated animate__fadeInDown">
+
+                    <span class="close-tp" id="closeTp">&times;</span>
+                    <p><i class="fa-brands fa-skype"></i> Skype: helper<br><i class="fa-brands fa-telegram"></i> Telegram: @helper<br><i class="fa-solid fa-phone"></i> Телефон: 8901006029</p>
+
+                </div>
+
+            </div>
+
+            <!-- Подарок -->
+
+            <img class="podarok" id="myBtn" src="Images/podarok.png" alt="" width="100">
+
+            <div id="myModal" class="modal">
+
+                <div class="modal-content-gift animate__animated animate__backInLeft wow">
+
+                    <span class="close" id="close">&times;</span>
+                    <p>Поздравляем!<br>Вы получили купон на скидку 50%!!
+
+                </div>
+
+            </div>
+
+            <a href="javascript:void(0)" class="hamburger navbar-item" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <header>
+
+        <div class="header-text">
+
+            <span class="span_1">ФУТБОЛКИ С ПРИНТАМИ</span><br>
+            <span class="span_2">От 499<sup class="sup">руб.</sup></span><br>
+            <span class="span_3">ПОЧЕМУ ТАК ДЁШЕВО!?</span><br>
+
+        </div>
+
+        <div class="header-images">
+
+
+            <div class="header-image">
+                <center><img class="animate_animated animate__heartBeat wow" src="Images/sale.png" alt="" height="70"
+                        width="105"><br>
+                    Низкие цены</center>
+            </div>
+
+            <div class="header-image">
+                <center><img class="animate__animated animate__lightSpeedInRight wow" src="Images/gruzovik.png" alt=""
+                        height="90" width="98"><br>
+                    Доставка по всей России</center>
+            </div>
+
+            <div class="header-image">
+                <center><img class="animate_animated animate__heartBeat wow" src="Images/hit.png" alt="" height="80"
+                        width="80"><br>
+                    Только хиты</center>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="main-text">
+            <h2>ФУТБОЛКИ</h2>
+            <span>100% хлопок</span>
+        </div>
+
+        <div class="main">
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="/Shop/Images/tshirt-1.jpg" alt="" width="300" height="300">
+                    <div class="text"><span class="slideshow-main-text">Футболка</span><br>
+                        <div class="main-item-price">
+                            <span class="main-item-price-now">623 ₽</span><br>
+                            <span class="main-item-price-last"><s>1199 ₽</s></span>
+                            <p class="main-item-discount">
+                                -<span>48</span>%
+                            </p>
+                        </div>
+                        <div class="btn-primary-center">
+                            <button class="btn btn-primary" type="button">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="/Shop/Images/tshirt-2.jpg" alt="" width="300" height="300">
+                    <div class="text"><span class="slideshow-main-text">Футболка</span><br>
+                        <div class="main-item-price">
+                            <span class="main-item-price-now">623 ₽</span><br>
+                            <span class="main-item-price-last"><s>1199 ₽</s></span>
+                            <p class="main-item-discount">
+                                -<span>48</span>%
+                            </p>
+                        </div>
+                        <div class="btn-primary-center">
+                            <button class="btn btn-primary" type="button">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="/Shop/Images/tshirt-3.jpg" alt="" width="300" height="300">
+                    <div class="text"><span class="slideshow-main-text">Футболка</span><br>
+                        <div class="main-item-price">
+                            <span class="main-item-price-now">623 ₽</span><br>
+                            <span class="main-item-price-last"><s>1199 ₽</s></span>
+                            <p class="main-item-discount">
+                                -<span>48</span>%
+                            </p>
+                        </div>
+                        <div class="btn-primary-center">
+                            <button class="btn btn-primary" type="button">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="/Shop/Images/tshirt-4.png" alt="" width="300" height="300">
+                    <div class="text"><span class="slideshow-main-text">Футболка</span><br>
+                        <div class="main-item-price">
+                            <span class="main-item-price-now">623 ₽</span><br>
+                            <span class="main-item-price-last"><s>1199 ₽</s></span>
+                            <p class="main-item-discount">
+                                -<span>48</span>%
+                            </p>
+                        </div>
+                        <div class="btn-primary-center">
+                            <button class="btn btn-primary" type="button">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <div class="lotery">
+
+                <div class="lotery-header">
+                    Розыгрыш 100,000 ₽
+                </div>
+
+                <div class="lotery-text">
+                    Сделайте заказ на любую сумму в течении акции и получите возможность выйграть 100,000 ₽.<br>
+                    В 23:00 (МСК) 01.06.2023 в прямом эфире разыгрется 100,000 ₽ между 10 победителями.<br>
+                    <span class="event">Срок акции: с 01.05.2023 по 01.06.2023</span><br>
+
+                    <div class="btn-div-lotery">
+                        <button class="btn-lotery">За покупками!</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+    <section>
+
+        <div class="six-main-item-title">
+            <h2>Как выбрать размер</h2>
+        </div>
+
+
+        <div class="six-main-items">
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/photo2.png" alt="" height="400" width="350"><br>
+                <span class="six-main-item-title">Футболка 1</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">623 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1199 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>48</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="btn btn-primary six-main-item-button" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/tshirt-7.png" alt="" height="400" width="350"><br>
+                <span class="six-main-item-title">Футболка 2</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">623 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1199 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>48</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="btn btn-primary six-main-item-button" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/tshirt-8.png" alt="" height="400" width="350"><br>
+                <span class="six-main-item-title">Футболка 3</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">623 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1199 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>48</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="btn btn-primary six-main-item-button" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="six-main-items">
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/tshirt-9.png" alt="" height="400" width="350"><br>
+                <span class="six-main-item-title">Футболка 4</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">623 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1199 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>48</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="btn btn-primary six-main-item-button" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/tshirt-11.png" alt="" height="400" width="350"><br>
+                <span class="six-main-item-title">Футболка 5</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">623 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1199 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>48</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="btn btn-primary six-main-item-button" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/tshirt-12.png" alt="" height="400" width="350"><br>
+                <span class="six-main-item-title">Футболка 6</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">623 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1199 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>48</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="btn btn-primary six-main-item-button" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cart">
+        <h2 class="cart-title"><i class="fa-solid fa-cart-shopping"></i> Корзина</h2>
+
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Товар</span>
+            <span class="cart-price cart-header cart-column">Цена</span>
+            <span class="cart-quantity cart-header cart-column">Количество</span>
+        </div>
+
+        <div class="cart-items">
+
+            <!-- <div class="cart-row">
+
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="Images/cactus-1.jpg" width="100" height="100">
+                    <span class="cart-item-title">Красивый кактус 1</span>
+                </div>
+
+                <span class="cart-price cart-column">623 ₽</span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" min="1" value="1">
+                    <button class="btn btn-danger" type="button">Удалить</button>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="total">
+            <strong class="cart-total-title">Итог:</strong>
+            <span class="cart-total-price">0 ₽</span>
+        </div>
+
+        <button id="orderBtn" class="order-button">Перейти к оформлению</button>
+
+        <div id="order" class="orderModal">
+
+            <div class="modal-content-order animate__animated animate__fadeInDown">
+                <span class="close" id="orderClose">&times;</span>
+                <div class="order-section">
+                    <h2>Оформление заказа</h2>
+
+                    <label for="name">Имя</label><br>
+                    <input type="text" id="name" name="name" placeholder="Имя" required><br>
+
+                    <label for="fname">Фамилия</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="Фамилия" required><br>
+
+                    <label for="email">Электронная почта</label><br>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+
+                    <label for="phone">Телефон</label><br>
+                    <input type="text" id="phone" name="phone" placeholder="Номер телефона" required><br>
+
+                    <label for="adres">Адрес</label><br>
+                    <input type="text" id="adres" name="adres" placeholder="Улица" required><br>
+
+                    <p>Оплата картой</p>
+                    <hr>
+
+                    <button class="order-button">Перейти к оплате</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="rating">
+
+        <div class="rating-star">
+            <img src="Images/star_2.png" alt="" width="65" height="58" id="star-1" onmouseenter="star(1)">
+            <img src="Images/star_2.png" alt="" width="65" height="58" id="star-2" onmouseenter="star(2)">
+            <img src="Images/star_2.png" alt="" width="65" height="58" id="star-3" onmouseenter="star(3)">
+            <img src="Images/star_2.png" alt="" width="65" height="58" id="star-4" onmouseenter="star(4)">
+            <img src="Images/star_2.png" alt="" width="65" height="58" id="star-5" onmouseenter="star(5)">
+
+
+        </div><br>
+
+        <div class="rating-button">
+
+            <button class="reset" onclick="resetRating()">Сброс</button><br>
+
+            <button class="send-rating" id="sendRating">Оценить сайт</button><br>
+
+        </div>
+
+        <p class="rating-text" id="ratingText"></p>
+
+    </div>
+
+    <footer>
+        &copy; Сорокин Фёдор, 2023
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
