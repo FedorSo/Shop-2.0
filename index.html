@@ -21,42 +21,35 @@
             <a class="navbar-logo" href="#">
                 <img class="navbar-logo-img" src="Images/favicon.png" alt="">
             </a>
+
         </div>
 
         <div class="navbar-items">
-            <a href="#" class="navbar-item"><i class="fa fa-home"></i> Главная</a>
-            <a href="#" class="navbar-item"><i class="fa fa-book"></i> Работы</a>
-            <a href="#" class="navbar-item"><i class="fa fa-info"></i> Информация</a>
+            <!-- <a href="#" class="navbar-item"><i class="fa fa-home"></i> Главная</a> -->
+            <a href="https://github.com/FedorSo?tab=repositories" class="navbar-item"><i class="fa fa-book"></i>
+                Работы</a>
+
+            <!-- Информация -->
+
+            <a href="#" class="navbar-item" id="info"><i class="fa fa-info"></i> Информация</a>
+
+            <div id="modalInfo" class="modal-info">
+
+                <div class="modal-content-info animate__animated animate__fadeInDown">
+
+                    <span class="close-info" id="closeInfo">&times;</span>
+                    <p>
+                        <b>Информация:</b>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="#cart" class="navbar-item"><i class="fa-solid fa-cart-shopping"></i> Корзина</a>
             <a href="#" class="navbar-item" id="btnTp"><i class="fa fa-id-card"></i> Помощь</a>
-
-            <!-- Функция тех. поддержки -->
-
-            <div id="modalTp" class="modal-tp">
-
-                <div class="modal-content-tp animate__animated animate__fadeInDown">
-
-                    <span class="close-tp" id="closeTp">&times;</span>
-                    <p><i class="fa-brands fa-skype"></i> Skype: helper<br><i class="fa-brands fa-telegram"></i> Telegram: @helper<br><i class="fa-solid fa-phone"></i> Телефон: 8901006029</p>
-
-                </div>
-
-            </div>
-
             <!-- Подарок -->
-
-            <img class="podarok" id="myBtn" src="Images/podarok.png" alt="" width="100">
-
-            <div id="myModal" class="modal">
-
-                <div class="modal-content-gift animate__animated animate__backInLeft wow">
-
-                    <span class="close" id="close">&times;</span>
-                    <p>Поздравляем!<br>Вы получили купон на скидку 50%!!
-
-                </div>
-
-            </div>
-
+            <img class="gift" id="btnGift" src="Images/podarok.png" alt="" width="100">
             <a href="javascript:void(0)" class="hamburger navbar-item" onclick="openNav()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -77,21 +70,27 @@
 
 
             <div class="header-image">
-                <center><img class="animate_animated animate__heartBeat wow" src="Images/sale.png" alt="" height="70"
+                <center>
+                    <img class="animate_animated animate__heartBeat wow" src="Images/sale.svg" alt="" height="70"
                         width="105"><br>
-                    Низкие цены</center>
+                    <span class="header-images-text">Скидки от 30%</span>
+                </center>
             </div>
 
             <div class="header-image">
-                <center><img class="animate__animated animate__lightSpeedInRight wow" src="Images/gruzovik.png" alt=""
+                <center>
+                    <img class="animate__animated animate__lightSpeedInRight wow" src="Images/gruzovik.png" alt=""
                         height="90" width="98"><br>
-                    Доставка по всей России</center>
+                    <span class="header-images-text">Доставка по всему миру</span>
+                </center>
             </div>
 
             <div class="header-image">
-                <center><img class="animate_animated animate__heartBeat wow" src="Images/hit.png" alt="" height="80"
+                <center>
+                    <img class="animate_animated animate__heartBeat wow" src="Images/hit.png" alt="" height="80"
                         width="80"><br>
-                    Только хиты</center>
+                    <span class="header-images-text">Только хиты</span>
+                </center>
             </div>
 
         </div>
@@ -310,7 +309,7 @@
 
     </section>
 
-    <section class="cart">
+    <section class="cart" id="cart">
         <h2 class="cart-title"><i class="fa-solid fa-cart-shopping"></i> Корзина</h2>
 
         <div class="cart-row">
@@ -398,6 +397,38 @@
         </div>
 
         <p class="rating-text" id="ratingText"></p>
+
+    </div>
+
+    <!-- modals -->
+
+    <!-- Функция тех. поддержки -->
+
+    <div id="modalTp" class="modal-tp">
+
+        <div class="modal-content-tp animate__animated animate__fadeInDown">
+
+            <span class="close-tp" id="closeTp">&times;</span>
+            <p>
+            <h2>Контакты</h2>
+
+            <i class="fa-brands fa-skype"></i> <b>Skype:</b> <a>helper</a><br>
+            <i class="fa-brands fa-telegram"></i> <b>Telegram:</b> <a>@helper</a><br>
+            <i class="fa-solid fa-phone"></i> <b>Телефон:</b> <a>8901006029</a><br>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div id="modalGift" class="modal-gift">
+
+        <div class="modal-content-gift animate__animated animate__fadeInDown">
+
+            <span class="close-gift" id="closeGift">&times;</span>
+            <p>Поздравляем!<br>Вы получили купон на скидку 50%!!
+
+        </div>
 
     </div>
 

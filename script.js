@@ -99,9 +99,9 @@ function rand_tshirt() {
 
 // Подарок
 
-const modalGift = document.getElementById("myModal");
-const openGift = document.getElementById("myBtn");
-const closeGift = document.getElementById("close");
+const modalGift = document.getElementById("modalGift");
+const openGift = document.getElementById("btnGift");
+const closeGift = document.getElementById("closeGift");
 
 openGift.onclick = function (){
     modalGift.style.display = "block";
@@ -134,6 +134,46 @@ closeTp.onclick = function (){
 modalTp.onclick = function (event){
     if (event.target === modalTp) {
         modalTp.style.display = "none";
+    }
+}
+
+// Оплата
+
+const order = document.getElementById("order");
+const openOrder = document.getElementById("orderBtn");
+const closeOrder = document.getElementById("orderClose");
+
+openOrder.onclick = function (){
+    order.style.display = "block";
+}
+
+closeOrder.onclick = function (){
+    order.style.display = "none";
+}
+
+order.onclick = function (event){
+    if (event.target === order) {
+        order.style.display = "none";
+    }
+}
+
+// Инфо
+
+const info = document.getElementById("modalInfo");
+const openInfo = document.getElementById("info");
+const closeInfo = document.getElementById("closeInfo");
+
+openInfo.onclick = function (){
+    info.style.display = "block";
+}
+
+closeInfo.onclick = function (){
+    info.style.display = "none";
+}
+
+info.onclick = function (event){
+    if (event.target === info) {
+        info.style.display = "none";
     }
 }
 
@@ -255,7 +295,7 @@ function removeCartItem (event) {
 
 
 function quantityChanged (event) {
-    console.log("Меняем количество товаров.");
+    // console.log("Меняем количество товаров.");
 
     updateCartTotal ();
 }
@@ -285,26 +325,6 @@ function updateCartTotal () {
     }
 
     document.querySelector(".cart-total-price").innerText = total + " ₽";
-}
-
-// Оплата
-
-const order = document.getElementById("order");
-const openOrder = document.getElementById("orderBtn");
-const closeOrder = document.getElementById("orderClose");
-
-openOrder.onclick = function (){
-    order.style.display = "block";
-}
-
-closeOrder.onclick = function (){
-    order.style.display = "none";
-}
-
-order.onclick = function (event){
-    if (event.target === order) {
-        order.style.display = "none";
-    }
 }
 
 function openNav() {
