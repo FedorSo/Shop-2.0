@@ -40,7 +40,7 @@ function resetRating() {
     siteRating = 0;
 
     let ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
-
+    document. getElementById("ratingText").innerText = "";
 
     for (let i = 0; i < ids.length; i++){
         let id = ids[i];
@@ -62,19 +62,19 @@ setRatingBtn.addEventListener("click", function (){
             break;
         case 2:
             text = "Спасибо за ваш отзыв.\nВы поставили 2 Балла";
-            break
+            break;
         case 3:
             text = "Удволетворительно!\nВы поставили 3 Балла";
-            break
+            break;
         case 4:
             text = "Спасибо что вы поставили 4 балла!";
-            break
+            break;
         case 5:
             text = "Мы очень рады что вы поставили 5 баллов!";
-            break
+            break;
         default:
             text = "Пожалуйста поставте оценку сайта";
-            break
+            break;
     }
     document. getElementById("ratingText").innerText = text;
 
