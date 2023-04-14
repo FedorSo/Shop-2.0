@@ -12,11 +12,11 @@ function star(starNumber) {
 
     let star = document.getElementById(ids[starNumber]);
 
-    if (star.src.includes("Images/star_2.png")){
+    if (star.src.includes("Images/star_2.svg")){
 
         for (let i = 0; i <= starNumber; i++){
             let id = ids[i];
-            document.getElementById(id).src = "Images/star_1.png";     
+            document.getElementById(id).src = "Images/star_1.svg";     
         }
 
     }
@@ -26,7 +26,7 @@ function star(starNumber) {
         for (let i = 0; i < ids.length; i++){
             if (i > starNumber) {
                 let id = ids[i];
-                document.getElementById(id).src = "Images/star_2.png";
+                document.getElementById(id).src = "Images/star_2.svg";
 
             }
         }
@@ -44,7 +44,7 @@ function resetRating() {
 
     for (let i = 0; i < ids.length; i++){
         let id = ids[i];
-        document.getElementById(id).src =  "Images/star_2.png";
+        document.getElementById(id).src =  "Images/star_2.svg";
     }
 }
 
@@ -58,10 +58,10 @@ setRatingBtn.addEventListener("click", function (){
 
     switch (siteRating) {
         case 1:
-            text = "Мы ожидали чего-то большего.\nВы поставили 1 Балл";
+            text = "Очень жаль(.\nВы поставили 1 Балл";
             break;
         case 2:
-            text = "Спасибо за ваш отзыв!\nВы поставили 2 Балла";
+            text = "Спасибо за ваш отзыв.\nВы поставили 2 Балла";
             break
         case 3:
             text = "Удволетворительно!\nВы поставили 3 Балла";
@@ -177,40 +177,55 @@ info.onclick = function (event){
     }
 }
 
-let slideIndex = 1;
-showSlides (slideIndex);
 
+
+// slideshow
 
 function showSlides (n) {
-    let slides = document.querySelectorAll(".mySlides");
+    const slide_images = ['tshirt-1.png', 'tshirt-2.png', 'tshirt-3.png', 'tshirt-4.png']
 
-    // console.log(slides);
+    // let slides = document.querySelectorAll(".mySlides");
 
     // Если номер слайда превышает количество слайдов - перейти к первому
-    if (n > slides.length) { slideIndex = 1};
+    if (n > slide_images.length - 1) { slideIndex = 0};
     // Если номер слайда меньше еденицы - показываем последний
-    if (n < 1) { slideIndex = slides.length};
+    if (n < 0) {slideIndex = slide_images.length};
 
     // console.log("Номер слайда " + n);
 
     // Скрываем все слайды - очищаем экран
-    for (let slide of slides) {
-        slide.style.display = "none";
-    }
+
+    // console.log(slideIndex);
+
+    // for (let slide of slides) {
+    //     slide.style.display = "none";
+    // }
 
     // Показываем выбранный слайд
-    slides[slideIndex - 1].style.display = "block";
+    // slides[slideIndex - 1].style.display = "block";
 
 
-    const slideNum = `${slideIndex} из ${slides.length}`
-    document.querySelectorAll('.numbertext')[slideIndex - 1].innerText = slideNum
+    // const slideNum = `${slideIndex} из ${main_images.length}`
+    // document.querySelectorAll('.numbertext')[slideIndex - 1].innerText = slideNum
+
+    document.querySelector('.slide img').src = 'Images/t-shirts/' + slide_images[slideIndex]
 }
 
 function plusSlides (i) {
     showSlides(slideIndex += i);
 }
 
-const addToCartButtons = document.querySelectorAll(".six-main-item-button");
+
+let slideIndex = 0;
+showSlides (slideIndex);
+
+
+
+
+// cart
+
+
+const addToCartButtons = document.querySelectorAll(".btn");
 // console.log(addToCartButtons);
 
 for (let b of addToCartButtons) {
@@ -264,7 +279,7 @@ function addItemToCart(title, price, imageSrc) {
                 <span class="cart-price cart-column">${price}</span>
                 <div class="cart-quantity cart-column">
                     <input class="cart-quantity-input" type="number" min="1" max="99" value="1">
-                    <button class="btn btn-danger" type="button">Удалить</button>
+                    <button class="btn-danger" type="button">Удалить</button>
                 </div>`;
 
     cartRow.innerHTML = cartRowContents;
@@ -321,7 +336,7 @@ function updateCartTotal () {
 
         total = total + price * quantity
 
-        console.log(total);
+        // console.log(total);
     }
 
     document.querySelector(".cart-total-price").innerText = total + " ₽";
