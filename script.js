@@ -97,26 +97,6 @@ function rand_tshirt() {
 
 }
 
-// Подарок
-
-const modalGift = document.getElementById("modalGift");
-const openGift = document.getElementById("btnGift");
-const closeGift = document.getElementById("closeGift");
-
-openGift.onclick = function (){
-    modalGift.style.display = "block";
-}
-
-closeGift.onclick = function (){
-    modalGift.style.display = "none";
-}
-
-modalGift.onclick = function (event){
-    if (event.target === modalGift) {
-        modalGift.style.display = "none";
-    }
-}
-
 // Тех. поддержка
 
 const modalTp = document.getElementById("modalTp");
@@ -341,10 +321,3 @@ function updateCartTotal () {
 
     document.querySelector(".cart-total-price").innerText = total + " ₽";
 }
-
-function openNav() {
-    const nav = document.querySelector('nav');
-        nav.classList.toggle('responsive');
-        console.log("Открываем консоль");
-}
-

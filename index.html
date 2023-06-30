@@ -18,43 +18,22 @@
 <body>
 
     <nav class="navbar">
-        <div class="navbar-brand">
-            <a class="navbar-logo" href="#">
-                <img class="navbar-logo-img" src="Images/favicon.png" alt="">
-            </a>
-
+        <div class="logo">
+            <img class="logo-img" src="Images/favicon.png" alt="">
+            <p class="logo-text">Your Style</p>
         </div>
-
-        <div class="navbar-items">
-            <!-- <a href="#" class="navbar-item"><i class="fa fa-home"></i> Главная</a> -->
-            <a href="https://github.com/FedorSo?tab=repositories" class="navbar-item"><i class="fa fa-book"></i>
-                Работы</a>
-
-            <!-- Информация -->
-
-            <a href="javascript:void(0)" class="navbar-item" id="info"><i class="fa fa-info"></i> Информация</a>
-
-            <div id="modalInfo" class="modal-info">
-
-                <div class="modal-content-info animate__animated animate__fadeInDown">
-
-                    <span class="close-info" id="closeInfo">&times;</span>
-                    <p>
-                        <b>Информация:</b>
-                    </p>
-
-                </div>
-
-            </div>
-
-            <a href="#cart" class="navbar-item"><i class="fa-solid fa-cart-shopping"></i> Корзина</a>
-
-            <a href="javascript:void(0)" class="navbar-item" id="btnTp"><i class="fa fa-id-card"></i> Помощь</a>
-            <!-- Подарок -->
-            <img class="gift" id="btnGift" src="Images/podarok.png" alt="" width="100">
-
-            <a href="javascript:void(0)" class="hamburger navbar-item" onclick="openNav()"><i
-                    class="fa fa-bars"></i></a>
+        <input type="checkbox" id="toggler">
+        <label class="nav-bars" for="toggler"><i class="fa-solid fa-bars"></i></label>
+        <div class="menu">
+            <ul class="list">
+                <li><a href="#" class="navbar-item"><i class="fa fa-home"></i> Главная</a></li>
+                <li><a href="https://github.com/FedorSo?tab=repositories" class="navbar-item"><i class="fa fa-book"></i> Работы</a></li>
+                <li><a href="javascript:void(0)" class="navbar-item" id="info"><i class="fa fa-info"></i> Информация</a></li>
+                <li><a href="#cart" class="navbar-item"><i class="fa-solid fa-cart-shopping"></i> Корзина</a></li>
+                <li><a href="javascript:void(0)" class="navbar-item" id="btnTp"><i class="fa fa-id-card"></i> Помощь</a></li>
+                <!-- <a href="javascript:void(0)" class="hamburger navbar-item" onclick="openNav()"><i
+                    class="fa fa-bars"></i></a> -->
+                </ul>
         </div>
     </nav>
 
@@ -141,7 +120,7 @@
 
             <div class="lotery-text">
                 Сделайте заказ на любую сумму в течении акции и получите возможность выйграть 100,000 ₽.<br>
-                В 23:00 (МСК) 01.06.2023 в прямом эфире разыгрется 100,000 ₽ между 10 победителями.<br>
+                В 23:00 (МСК) 01.06.2023 в прямом эфире разыграется 100,000 ₽ между 10 победителями.<br>
                 <span class="event">Срок акции: с 01.05.2023 по 01.06.2023</span><br>
 
                 <div class="btn-div-lotery">
@@ -359,6 +338,13 @@
     <!-- modals -->
 
     <!-- Функция тех. поддержки -->
+
+    <div id="modalInfo" class="modal-info">
+        <div class="modal-content-info animate__animated animate__fadeInDown">
+            <span class="close-info" id="closeInfo">&times;</span>
+            <p><b>Информация:</b></p>
+        </div>
+    </div>
 
     <div id="modalTp" class="modal-tp">
 

@@ -7,7 +7,7 @@ header {
     background-position: center;
     background-size: cover;
     padding: 20px 0;
-    margin-top: 55px;
+    /* margin-top: 55px; */
 }
 
 * {
@@ -21,14 +21,14 @@ section {
 }
 
 ::selection {
-    background-color: #4d4d4d;
+    background-color: #797979;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     background-color: #474646;
-    
+    color: #f2f2f2
 }
 
 img {
@@ -45,35 +45,37 @@ button {
 /* nav */
 
 .navbar {
-    overflow: hidden;
-    position: fixed;
-    color: white;
+    height: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     background-color: #303030;
-    width: 100%;
-    max-height: 55px;
-    z-index: 999;
-    top: 0;
 }
 
-.navbar-logo {
-    padding: 5px 20px 0 20px;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.navbar-logo-img {
-    width: 44px;
-    height: 44px;
+.logo-img {
+    margin-left: 10px;
+    width: 46px;
+    height: 46px;
+}
+
+.logo-text {
+    margin-left: 6px;
+    font-weight: 600;
 }
 
 .navbar a {
-    float: left;
-    display: block;
     color: #f2f2f2;
-    text-align: center;
     text-decoration: none;
 }
 
 .navbar-item {
-    padding: 16.5px 16px;
+    padding: 16.5px 20px;
 }
 
 .navbar a:hover {
@@ -85,41 +87,53 @@ button {
     background-color: rgb(39, 39, 39);
 }
 
-.navbar .hamburger {
+.list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-bars {
+    color: #f2f2f2;
+    padding: 16.5px 16.5px;
+}
+
+.nav-bars:hover {
+    background-color: #1ea0b1;
+    transition: 0.4s ease-out;
+}
+
+#toggler,
+.navbar .nav-bars {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
     .navbar a {
-        display: none;
+        padding: 16.5px 100px;
+        width: 100%;
+        margin: 5px;
     }
 
-    .navbar {
-        justify-content: space-between;
+    .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 34px;
     }
 
-    .navbar a.hamburger {
-        display: block;
+    .navbar .nav-bars{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
     }
 
-    .navbar.responsive {
-        display: block;
-    }
-
-    .navbar .hamburger {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .podarok{
-        display: none;
+    #toggler:checked ~ .menu{
+        max-height: 100%;
     }
 }
 
