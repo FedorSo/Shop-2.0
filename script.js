@@ -205,7 +205,7 @@ showSlides (slideIndex);
 // cart
 
 
-const addToCartButtons = document.querySelectorAll(".btn");
+const addToCartButtons = document.querySelectorAll(".cart-btn-add");
 // console.log(addToCartButtons);
 
 for (let b of addToCartButtons) {
@@ -213,10 +213,10 @@ for (let b of addToCartButtons) {
 }
 
 function addToCartClicked(event) {
-    const shopItem = event.target.parentElement.parentElement;
-    const title = shopItem.querySelector(".six-main-item-title").innerText;
-    const price = shopItem.querySelector(".six-main-item-price-now").innerText;
-    const imageSrc = shopItem.querySelector(".six-main-item-image").src;
+    // const shopItem = event.target.parentElement.parentElement;
+    const title = document.querySelector(".cart-title-add").innerText;
+    const price = document.querySelector(".cart-price-now-add").innerText;
+    const imageSrc = document.querySelector(".cart-img-add").src;
 
 
     // console.log(shopItem);

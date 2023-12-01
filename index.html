@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -26,82 +28,47 @@
         <label class="nav-bars" for="toggler"><i class="fa-solid fa-bars"></i></label>
         <div class="menu">
             <ul class="list">
-                <li><a href="#" class="navbar-item"><i class="fa fa-home"></i> Главная</a></li>
-                <li><a href="https://github.com/FedorSo?tab=repositories" class="navbar-item"><i class="fa fa-book"></i> Работы</a></li>
-                <li><a href="javascript:void(0)" class="navbar-item" id="info"><i class="fa fa-info"></i> Информация</a></li>
-                <li><a href="#cart" class="navbar-item"><i class="fa-solid fa-cart-shopping"></i> Корзина</a></li>
-                <li><a href="javascript:void(0)" class="navbar-item" id="btnTp"><i class="fa fa-id-card"></i> Помощь</a></li>
+                <li><a href="#" class="navbar-item"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="https://github.com/FedorSo?tab=repositories" class="navbar-item"><i class="fa fa-book"></i>
+                        Works</a></li>
+                <li><a href="javascript:void(0)" class="navbar-item" id="info"><i class="fa fa-info"></i>
+                        Information</a></li>
+                <li><a href="#cart" class="navbar-item"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="javascript:void(0)" class="navbar-item" id="btnTp"><i class="fa fa-id-card"></i> Help</a>
+                </li>
+                <li><input type="search" placeholder="Search" class="search" name="Search"></li>
                 <!-- <a href="javascript:void(0)" class="hamburger navbar-item" onclick="openNav()"><i
                     class="fa fa-bars"></i></a> -->
-                </ul>
+            </ul>
         </div>
     </nav>
 
-    <header>
-
-        <div class="header-text">
-            
-            <span class="header-text-1">ФУТБОЛКИ С ПРИНТАМИ</span><br>
-            <span class="header-text-2">От 499 ₽</span><br>
-            <span class="header-text-3">ПОЧЕМУ ТАК ДЁШЕВО!?</span><br>
-
-        </div>
-
-        <div class="header-images">
-
-
-            <div class="header-image">
-                <center>
-                    <img class="animate_animated animate__heartBeat wow" src="Images/sale.svg" alt="" height="70"
-                        width="105"><br>
-                    <span class="header-images-text">Скидки от 30%</span>
-                </center>
-            </div>
-
-            <div class="header-image">
-                <center>
-                    <img class="animate__animated animate__lightSpeedInRight wow" src="Images/gruzovik.png" alt=""
-                        height="90" width="98"><br>
-                    <span class="header-images-text header-images-text-2">Доставка по всему миру</span>
-                </center>
-            </div>
-
-            <div class="header-image">
-                <center>
-                    <img class="animate_animated animate__heartBeat wow" src="Images/hit.png" alt="" height="80"
-                        width="80"><br>
-                    <span class="header-images-text">Только хиты</span>
-                </center>
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <div class="main-text">
-        <h2>ФУТБОЛКИ</h2>
-        <span>100% хлопок</span>
-    </div>
+    <header></header>
 
     <main class="main">
         <div class="slideshow">
 
             <div class="slide">
                 <div class="slideshow-number-text"></div>
-                <img class="slideshow-image" src="Images/t-shirts/tshirt-1.png" alt="" width="300" height="300">
-                <div class="slideshow-text">
+                <img class="cart-img-add slideshow-image" src="Images/t-shirts/tshirt-1.png" alt="" width="300" height="300">
+                <div class="slideshow-main">
 
-                    <span class="slideshow-title">Футболка</span><br>
+                    <div class="slideshow-text">
+                        <span class="slideshow-title cart-title-add">Your Style / Футболка</span><br>
 
-                    <div class="slideshow-price">
-                        <span class="slideshow-price-now">623 ₽</span><br>
-                        <span class="slideshow-price-last"><s>1199 ₽</s></span>
-                        <span class="slideshow-discount">-<span>48</span>%</span>
+                        <div class="slideshow-price">
+                            <span class="cart-price-now-add slideshow-price-now">623 ₽</span><br>
+                            <span class="slideshow-price-last"><s>1199 ₽</s></span>
+                            <span class="slideshow-discount">-<span>48</span>%</span>
+                        </div>
+
+                        <p>Однотонная футболка мужская с округлым вырезом горловины и прямого кроя, выполнеая из
+                            плотного хлопка. Хлопок обеспечивает комфорт, не вызывает раздражения, позволяет коже
+                            дышать.</p>
                     </div>
 
                     <div class="btn-slideshow-center">
-                        <button class="btn btn-slideshow" type="button">Добавить в корзину</button>
+                        <button class="cart-btn-add btn-slideshow" type="button">Добавить в корзину</button>
                     </div>
 
                 </div>
@@ -118,10 +85,12 @@
                 Розыгрыш 100,000 ₽
             </div>
 
-            <div class="lotery-text">
-                Сделайте заказ на любую сумму в течении акции и получите возможность выйграть 100,000 ₽.<br>
-                В 23:00 (МСК) 01.06.2023 в прямом эфире разыграется 100,000 ₽ между 10 победителями.<br>
-                <span class="event">Срок акции: с 01.05.2023 по 01.06.2023</span><br>
+            <div class="lotery-main">
+                <div class="lotery-text">
+                    Сделайте заказ на любую сумму в течении акции и получите возможность выйграть 100,000 ₽.<br>
+                    В 23:00 (МСК) 01.06.2023 в прямом эфире разыграется 100,000 ₽ между 10 победителями.<br>
+                    <span class="event">Срок акции: с 01.05.2023 по 01.06.2023</span><br>
+                </div>
 
                 <div class="btn-div-lotery">
                     <button class="btn-lotery">За покупками!</button>
@@ -134,10 +103,10 @@
     </main>
 
 
-    <section>
+    <section class="eight-main-items">
 
-        <div class="six-main-item-title">
-            <h2>Как выбрать размер</h2>
+        <div class="six-main-items-title">
+            <h2>Men's T-shirts</h2>
         </div>
 
 
@@ -155,7 +124,7 @@
                     </p>
                 </div>
                 <div class="btn-primary-center">
-                    <button class="btn" type="button">Добавить в корзину</button>
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
                 </div>
             </div>
 
@@ -170,7 +139,7 @@
                     </p>
                 </div>
                 <div class="btn-primary-center">
-                    <button class="btn" type="button">Добавить в корзину</button>
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
                 </div>
             </div>
 
@@ -185,7 +154,23 @@
                     </p>
                 </div>
                 <div class="btn-primary-center">
-                    <button class="btn" type="button">Добавить в корзину</button>
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/t-shirts/tshirt-18.png" alt="" height="400"
+                    width="350"><br>
+                <span class="six-main-item-title">Футболка 1</span><br>
+                <div class="six-main-item-price">
+                    <span class="six-main-item-price-now">869 ₽</span><br>
+                    <span class="six-main-item-price-last"><s>1359 ₽</s></span>
+                    <p class="six-main-item-discount">
+                        -<span>36</span>%
+                    </p>
+                </div>
+                <div class="btn-primary-center">
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
                 </div>
             </div>
 
@@ -194,7 +179,31 @@
         <div class="six-main-items">
 
             <div class="six-main-item">
-                <img class="six-main-item-image" src="Images/t-shirts/tshirt-11.png" alt="" height="400" width="350"><br>
+                <div class="div-img">
+                    <img class="six-main-item-image" src="Images/t-shirts/tshirt-18.png" alt="" height="400"
+                        width="350"><br>
+                </div>
+
+                <div class="six-main-item-subtitle">
+                    <span class="six-main-item-title">Футболка 1</span><br>
+                    <div class="six-main-item-price">
+                        <span class="six-main-item-price-now">869 ₽</span><br>
+                        <span class="six-main-item-price-last"><s>1359 ₽</s></span>
+                        <p class="six-main-item-discount">
+                            -<span>36</span>%
+                        </p>
+                    </div>
+
+
+                    <div class="btn-primary-center">
+                        <button class="cart-btn btn" type="button">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="six-main-item">
+                <img class="six-main-item-image" src="Images/t-shirts/tshirt-11.png" alt="" height="400"
+                    width="350"><br>
                 <span class="six-main-item-title">Футболка 4</span><br>
                 <div class="six-main-item-price">
                     <span class="six-main-item-price-now">623 ₽</span><br>
@@ -204,12 +213,13 @@
                     </p>
                 </div>
                 <div class="btn-primary-center">
-                    <button class="btn" type="button">Добавить в корзину</button>
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
                 </div>
             </div>
 
             <div class="six-main-item">
-                <img class="six-main-item-image" src="Images/t-shirts/tshirt-16.png" alt="" height="400" width="350"><br>
+                <img class="six-main-item-image" src="Images/t-shirts/tshirt-16.png" alt="" height="400"
+                    width="350"><br>
                 <span class="six-main-item-title">Футболка 5</span><br>
                 <div class="six-main-item-price">
                     <span class="six-main-item-price-now">623 ₽</span><br>
@@ -219,7 +229,7 @@
                     </p>
                 </div>
                 <div class="btn-primary-center">
-                    <button class="btn" type="button">Добавить в корзину</button>
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
                 </div>
             </div>
 
@@ -234,7 +244,7 @@
                     </p>
                 </div>
                 <div class="btn-primary-center">
-                    <button class="btn" type="button">Добавить в корзину</button>
+                    <button class="cart-btn btn" type="button">Добавить в корзину</button>
                 </div>
             </div>
 
@@ -309,32 +319,6 @@
 
     </section>
 
-    <div class="rating">
-
-        <div class="rating-star">
-            <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-1" onmouseenter="star(1)">
-            <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-2" onmouseenter="star(2)">
-            <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-3" onmouseenter="star(3)">
-            <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-4" onmouseenter="star(4)">
-            <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-5" onmouseenter="star(5)">
-
-
-        </div><br>
-
-        <div class="rating-buttons">
-
-            <button class="reset" onclick="resetRating()">Сброс</button><br>
-
-            <button class="send-rating" id="sendRating">Оценить сайт</button><br>
-
-        </div>
-
-        <div class="rating-text-center">
-            <span class="rating-text" id="ratingText"></span>
-        </div>
-
-    </div>
-
     <!-- modals -->
 
     <!-- Функция тех. поддержки -->
@@ -363,23 +347,36 @@
 
     </div>
 
-    <div id="modalGift" class="modal-gift">
+    <footer class="footer">
+        &copy; Сорокин Фёдор, 2023
 
-        <div class="modal-content-gift animate__animated animate__fadeInDown">
+        <div class="rating">
 
-            <span class="close-gift" id="closeGift">&times;</span>
-            <h2>Подарок</h2>
-            <p>
-                Поздравляем!<br>
-                Вы получили купон на скидку 30%.<br>
-                При заказе на сумму от 1000 ₽ доставка бесплатная!
-            </p>
+            <div class="rating-star">
+                <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-1" onmouseenter="star(1)">
+                <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-2" onmouseenter="star(2)">
+                <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-3" onmouseenter="star(3)">
+                <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-4" onmouseenter="star(4)">
+                <img src="Images/star_2.svg" alt="" width="65" height="58" id="star-5" onmouseenter="star(5)">
+
+
+            </div><br>
+
+            <div class="rating-buttons">
+
+                <button class="reset" onclick="resetRating()">Сброс</button><br>
+
+                <button class="send-rating" id="sendRating">Оценить сайт</button><br>
+
+            </div>
+
+            <div class="rating-text-center">
+                <span class="rating-text" id="ratingText"></span>
+            </div>
+
         </div>
 
-    </div>
-
-    <footer>
-        &copy; Сорокин Фёдор, 2023
+        <img src="Images/Your Style®.png" alt="">
     </footer>
 
     <script src="script.js"></script>
